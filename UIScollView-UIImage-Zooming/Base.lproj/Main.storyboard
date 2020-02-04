@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIScollView_UIImage_Zooming" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vzj-eR-r8P">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DnN-Qr-lpl" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nyc-subway-map" translatesAutoresizingMaskIntoConstraints="NO" id="oHX-4h-cmk">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="oHX-4h-cmk" secondAttribute="bottom" id="M8E-Uy-nOO"/>
+                                            <constraint firstAttribute="trailing" secondItem="oHX-4h-cmk" secondAttribute="trailing" id="YZb-jY-b2S"/>
+                                            <constraint firstItem="oHX-4h-cmk" firstAttribute="leading" secondItem="DnN-Qr-lpl" secondAttribute="leading" id="mTY-2W-MUn"/>
+                                            <constraint firstItem="oHX-4h-cmk" firstAttribute="top" secondItem="DnN-Qr-lpl" secondAttribute="top" id="y0Q-GA-lmf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="DnN-Qr-lpl" secondAttribute="trailing" id="9Eg-fB-05d"/>
+                                    <constraint firstItem="DnN-Qr-lpl" firstAttribute="top" secondItem="Vzj-eR-r8P" secondAttribute="top" id="UET-YI-Srs"/>
+                                    <constraint firstItem="DnN-Qr-lpl" firstAttribute="width" secondItem="Vzj-eR-r8P" secondAttribute="width" id="kjX-eq-DMB"/>
+                                    <constraint firstItem="DnN-Qr-lpl" firstAttribute="height" secondItem="Vzj-eR-r8P" secondAttribute="height" id="mDA-pT-rCQ"/>
+                                    <constraint firstItem="DnN-Qr-lpl" firstAttribute="leading" secondItem="Vzj-eR-r8P" secondAttribute="leading" id="vZK-SL-xjX"/>
+                                    <constraint firstAttribute="bottom" secondItem="DnN-Qr-lpl" secondAttribute="bottom" id="yAe-v2-4sw"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="6RU-Rq-qrp"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="2fy-WB-A0n"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Vzj-eR-r8P" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KEb-JS-OEM"/>
+                            <constraint firstItem="Vzj-eR-r8P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qa2-Ds-T59"/>
+                            <constraint firstAttribute="bottom" secondItem="Vzj-eR-r8P" secondAttribute="bottom" id="gim-Sb-ZbA"/>
+                            <constraint firstItem="Vzj-eR-r8P" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nlN-y2-lcj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="Vzj-eR-r8P" id="oC6-Bo-XGr"/>
+                        <outlet property="subwayMap" destination="oHX-4h-cmk" id="yYh-Vv-YMb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="nyc-subway-map" width="2700" height="3314"/>
+    </resources>
+</document>
